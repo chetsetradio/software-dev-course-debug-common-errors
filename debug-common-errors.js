@@ -24,23 +24,23 @@ Think about which debugging methods you found most useful and how you might appl
 // Description:
 // This program is intended to display a simple prompt in the console but fails to run.
 
-console.log("Welcome to the bootcamp
+console.log("Welcome to the bootcamp");
 
-// What’s Wrong?
+// What’s Wrong? The program was missing the ending parenthesis ) and the ;
 
 
 // Program B
 // Description:
 // This code attempts to multiply each number in an array by 2 and display the results. However, it crashes at runtime.
 
-let numbers = [2, 4, "eight"];
+let numbers = [2, 4, 8];
 for (let i = 0; i < numbers.length; i++) {
   let doubled = numbers[i] * 2;
   console.log(doubled);
 }
 
-// What’s Wrong?
-
+// What’s Wrong? 8 in the array was a string instead of a number value, so it wasn't being multiplied by 2/being displayed. When changed
+// to a number, it changed from NaN to 16.
 
 
 // Program C (Logic Error)
@@ -49,7 +49,7 @@ for (let i = 0; i < numbers.length; i++) {
 
 function isPrime(num) {
   if (num < 2) return false;
-  for (let i = 2; i < num; i++) {
+  for (let i = 2; i = num; i++) {
     if (num % i === 0) {
       return true;  // Supposed to indicate num is NOT prime
     }
@@ -59,4 +59,4 @@ function isPrime(num) {
 
 console.log(isPrime(7)); // Expected true but gets false
 
-// What’s Wrong?
+// What’s Wrong? There was a comparasion where there should have been an assignment 
